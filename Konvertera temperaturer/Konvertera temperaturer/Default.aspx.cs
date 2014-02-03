@@ -25,7 +25,7 @@ namespace Konvertera_temperaturer
                     First.Text = "&degF";
                     Second.Text = "&degC";
                 }
-
+                //Körs om allt är okej
                 for (int temp = startValue; temp <= endValue; temp += scaleValue)
                 {
                     //Gör en tabell
