@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+﻿using Konvertera_temperaturer.Model;//Hämtar Konvertera_temperaturer klassen i modell
+using System;
 using System.Web.UI.WebControls;
-using Konvertera_temperaturer.Model;//Hämtar Konvertera_temperaturer klassen i modell
 
 namespace Konvertera_temperaturer
 {
@@ -12,7 +8,6 @@ namespace Konvertera_temperaturer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void ConvertButton_Click(object sender, EventArgs e)

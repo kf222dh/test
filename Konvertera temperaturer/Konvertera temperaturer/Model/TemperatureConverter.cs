@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Konvertera_temperaturer.Model
 {
@@ -18,6 +15,5 @@ namespace Konvertera_temperaturer.Model
         {
             return Convert.ToInt32((degreesF - 32) * 5 / 9);
         }
-
     }
 }
