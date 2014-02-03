@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Konvertera temperaturer</title>
-    <link href="style.css" rel="stylesheet"/>
+    <link href="~/style.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="The description of my page" />
 </head>
