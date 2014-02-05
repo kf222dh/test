@@ -22,8 +22,8 @@
                     <div id="conversion">
                         <asp:Table ID="ConversionTable" runat="server" CssClass="temperature">
                             <asp:TableHeaderRow>
-                                <asp:TableHeaderCell ID="First">&degC</asp:TableHeaderCell>
-                                <asp:TableHeaderCell ID="Second">&degF</asp:TableHeaderCell>
+                                <asp:TableHeaderCell ID="First">°C</asp:TableHeaderCell>
+                                <asp:TableHeaderCell ID="Second">°F</asp:TableHeaderCell>
                             </asp:TableHeaderRow>
                         </asp:Table>
                     </div>

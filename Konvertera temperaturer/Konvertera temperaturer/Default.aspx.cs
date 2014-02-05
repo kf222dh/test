@@ -14,19 +14,27 @@ namespace Konvertera_temperaturer
         {
             if (IsValid)
             {
+                int startTemp;
+                int endTemp;
+                int scaleTemp;
+
                 //Lagrar och gör om text till räkbar alltså int
-                var startValue = int.Parse(StartTextBox.Text);
-                var endValue = int.Parse(EndTextBox.Text);
-                var scaleValue = int.Parse(ScaleTextBox.Text);
+                startTemp = Int32.Parse(StartTextBox.Text);
+                endTemp = Int32.Parse(EndTextBox.Text);
+                scaleTemp = Int32.Parse(ScaleTextBox.Text);
+
+                //Visar upp tabellen.
+                ConversionLabel.Visible = true;
 
                 //Kollar vad man har valt i mellan °C eller °F i tabellhuvudet.
                 if (!CelToFahRadioButton.Checked)
                 {
-                    First.Text = "&degF";
-                    Second.Text = "&degC";
+                    First.Text = "°F";
+                    Second.Text = "°C";
                 }
+
                 //Körs om allt är okej
-                for (int temp = startValue; temp <= endValue; temp += scaleValue)
+                for (int i = startTemp; i <= endTemp; i += scaleTemp)
                 {
                     //Gör en tabell
                     TableRow row = new TableRow();
@@ -34,13 +42,10 @@ namespace Konvertera_temperaturer
                     TableCell[] cells = new TableCell[] { new TableCell(), new TableCell() };
                     row.Cells.AddRange(cells);
 
-                    cells[0].Text = temp.ToString();
-                    cells[1].Text = CelToFahRadioButton.Checked ?//Om den är checkad så
-                    TemperatureConverter.CelsiusToFahrenheit(temp).ToString() : TemperatureConverter.FahrenheitToCelsius(temp).ToString();//Konvertering(: betyder eller)
+                    cells[0].Text = String.Format("{0}", i);
+                    cells[1].Text = String.Format("{0:f0}", CelToFahRadioButton.Checked ?//Om den är checkad så
+                    TemperatureConverter.CelsiusToFahrenheit(i).ToString() : TemperatureConverter.FahrenheitToCelsius(i).ToString());//Konvertering(: betyder eller)
                 }
-
-                //Visar upp tabellen.
-                ConversionLabel.Visible = true;
             }
         }
     }
